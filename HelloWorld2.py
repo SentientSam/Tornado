@@ -1,15 +1,18 @@
 import tornado.web
 import tornado.ioloop
 
-class basicRequesthandler(tornado.web.RequestHandler):
+class basicRequestHandler(tornado.web.RequestHandler):
   def get(self):
     self.write("Hello, world!")
 
-
+class staticRequestHandler(tornado.web.RequestHandler):
+  def get(self):
+    self.render("HelloWorld2Index.html")
 
 if __name__ == "__main__":
   app = tornado.web.Application([
-    (r"/", basicRequesthandler)
+    (r"/", basicRequestHandler),
+    (r"/Welcome", staticRequestHandler)
   ])
 
   app.listen(3000)
