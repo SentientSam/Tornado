@@ -14,5 +14,4 @@ if __name__ == "__main__":
     app = make_app()
     app.listen(3000)
     tornado.ioloop.IOLoop.current().start()
-# To see the "Hello World!" go to your browser and type in localhost:3000 in the url bar at the top
-    
+# To see the "Hello World!" go to your browser and type in localhost:3000 in the url bar at the top 
